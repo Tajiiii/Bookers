@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<% link_to book_path %>
+	<title></title>
+</head>
+<body>
+	<p id="notice">Book was successfully created.</p>
+	<p>
+		<strong>Title:</strong><%= @book.title %>
+	</p>
+	<p>
+		<strong>Body:</strong><%= @book.body %>
+	</p>
+	<%=link_to "edit",edit_book_path(@book.id) %>
+	<a class="back" href="/books">Back</a>
+
+</body>
+</html>
+
+
