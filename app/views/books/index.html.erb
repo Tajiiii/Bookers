@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Bookers</title>
+	<title>WebCampBackendNew</title>
 </head>
 <body>
 	<h1>Books</h1>
@@ -27,7 +27,7 @@
 			</tbody>
 		</table>
 
-	<h2>New book</h2>
+	<h2 class="newbook">New book</h2>
 
 	<%= form_for(@book) do |f| %>
 
@@ -45,16 +45,18 @@
  	  <% end %>
 
 	<div class="field">
-		<%= f.label :title %><br>
-		<%= f.text_field :title %>
+		<div><%= f.label :title %></div>
+		<div><%= f.text_field :title %></div>
 	</div>
 
 	<div class="field">
-		<%= f.label :Body %><br>
-		<%= f.text_field :body %>
+		<div><%= f.label :body %></div>
+		<div><%= f.text_area :body %></div>
 	</div>
 
-	<%= f.submit 'Create Book' %>
+	<div class="action">
+	  <%= f.submit 'Create Book' %>
+	</div>
 	<% end %>
 
 </body>
